@@ -1,0 +1,28 @@
+html {
+    font-family: Veneer;
+  }
+  
+  ul {
+    padding: 10px;
+    margin: 10px;
+    list-style-type: circle; ;
+  }
+  
+  label {
+    padding-top: 5px;
+    margin-left: 10px;
+  }
+  
+  .bannerimage {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    background-size: cover;
+  }
+  
+  .wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+  }
