@@ -1,43 +1,94 @@
 html {
-    font-family: Veneer;
+    font-family: Nasa;
   }
   
-  ul {
-    padding: 10px;
-    margin: 10px;
-    list-style-type: circle; ;
-  }
-  
-  label {
-    padding-top: 5px;
-    margin-left: 10px;
-  }
-  
-  .bannerimage {
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 200px;
-    background-size: cover;
-  }
-  
-  .wrapper {
-    margin: 0 auto;
-    max-width: 1000px;
-    width: 100%;
+
+  #logo {
+      float: left;
+      position: absolute;
+
   }
 
-  div.gallery {
-    border: 1px solid #ccc;
-}
+  #nasalogo {
+    height: 150px; 
+    width: 180px;
+  }
+
+
+
+  #jfk {
+      float: right;
+      clear: left;
+      position: relative;
+      top: -300px;
+      width: 500px;
+      height: 300px;
+
+  }
+
+  #page-header {
+      float: left ;
+      position: relative;
+      left:175px;
+      font-size: xx-large;
+  }
+
+  #rover-selector {
+      float: left;
+      font-size: xx-large;
+      clear: left;
+      position: relative;
+      left: 20px;
+      top: 20px;
+  }
+
+  #date-selector {
+      float: left;
+      clear: left;
+      font-size: xx-large;
+      position: relative;
+      left: 190px;
+      top: 20px;
+  }
+
+  #get-data-button {
+      position: relative;
+      top: 50px;
+      float: left;
+      clear: left;
+      font-size: 40px;
+      border-radius: 8px;
+      font-family: Nasa;
+      position: relative;
+      left: 185px;
+  }
+  
+  div.gallery-container {
+      float: left;
+      clear:left;
+      position: relative;
+      top: 70px;
+
+  }
 
 div.gallery:hover {
-    border: 1px solid #777;
+    border: 1px solid rgb(171, 93, 243);
 }
 
-div.gallery img {
+div.gallery {
+    float: left;
+    clear: left;
+    box-sizing: border-box;
     width: 100%;
-    height: auto;
+    height: 100%;
+    padding: 10px;
+}
+
+
+.mars-image {
+    float: left;
+    clear: left;
+    border-radius: 8px;
 }
 
 div.desc {
@@ -45,15 +96,12 @@ div.desc {
     text-align: center;
 }
 
-* {
-    box-sizing: border-box;
+.responsive {
+    float: left;
+    clear:left;
+    width: 100%;
 }
 
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-}
 
 @media only screen and (max-width: 700px){
     .responsive {
@@ -68,8 +116,8 @@ div.desc {
     }
 }
 
-.clearfix:after {
+.clearfix::after {
     content: "";
     display: table;
     clear: both;
-}
+} 

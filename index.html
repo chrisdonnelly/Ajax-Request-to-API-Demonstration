@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="../styles.css" media="screen">
-  <link rel"icon" href="../images/nasalogo.png/">
+  <link rel"icon" href="https://pmm.nasa.gov/sites/default/files/NASA-Logo-Large.jpg">
   <title>Mars Rover</title>
   <script src='nasaToken.js'></script>
   <script src='nasa_data.js'></script>
@@ -11,37 +11,60 @@
   <script src='rover_details_view.js'></script>
   <script src='app.js'></script>
 </head>
+
 <body>
-  <h1>Rovers</h1>
+
+  <div id='logo'>
+  <img 
+  id='nasalogo'
+  src="https://pmm.nasa.gov/sites/default/files/NASA-Logo-Large.jpg" 
+  alt="Nasa Logo" 
+  ></div>
+
+  <div id='page-header'>
+      <h1>Mars Rover Visual Telemetry</h1>
+  </div>
+
+  <br>
+
+ <div id='rover-selector'>
   <p class="Rover-drop-down">
     <label for="Rover-drop-down-list">Select a Rover:</label>
-    <select name='rover_list' id='rover-drop-down'>
+    <select name='rover_list' id='rover-drop-down' required>
+      <optgroup id="rover-options">
       <option value="" disabled selected>Select a Rover</option>
       <option value="curiosity">Curiosity</option>
       <option value="opportunity">Opportunity</option>
       <option value="spirit">Spirit</option>
+      </optgroup>
       </select>
       </p>
+    </div>
 
-      <form>
+    <br>
+
+      <form id=date-selector>
         Date:
-        <input type='date' name='date' id='date'>
+        <input type='date' name='date' id='date' required>
       </form>
 
-      <button id='get-data-button' type="button">Connect to Mars</button>
 
+
+      <button id='get-data-button' type="button">Connect to Mars</button>
+      
+      <br>
       <br>
 
-      <div class="responsive">
-          <div class="gallery" id="rover-gallery">
-            <div class="desc"></div>
-          </div>
-        </div>
-
+      <iframe id='jfk' src="https://www.youtube.com/embed/hZyLwfrDyjc?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;start=1" frameborder="0" allowfullscreen></iframe>
       
-
-
-      <!-- <ul id='pictures'></ul> -->
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <div class="gallery-container" id ="gallery-container"></div>
+      
+      <div class="clearfix"></div>
 
 </body>
 </html>
