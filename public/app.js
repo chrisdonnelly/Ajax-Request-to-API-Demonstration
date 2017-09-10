@@ -1,15 +1,45 @@
 var app = function(){
-    var nasaData = new NasaData('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2017-9-7&api_key=Nc2AZ36zbiEtPSs2iwQxCspjOElS6DAXyicAJgDH');
-    nasaData.getData();
 
-    var select = document.querySelector('#rover-drop-down');
-    var roverSelectView = new RoverSelectView(select, nasaData);
-    var detailsElement = document.querySelector('#rover-details');
-    var roverDetails = new RoverDetailsView();
+    var roverName = null;
+    var date = null;
+    
+    var roverSelect = document.getElementById('rover-drop-down');
+    
+    roverSelect.addEventListener('change', function() {
+        roverName = this.value;      
+    })
+  
+    var dateBox = document.getElementById('date');
+    
+    dateBox.addEventListener('change', function() {
+        date = this.value;
+    })
 
-    roverSelectView.onChange = function(Country) {
-        roverDetailsView.render();
-    }
+    var getDataButton = document.getElementById('get-data-button');
+    
+    getDataButton.addEventListener('click', function() {
+        var url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/'+roverName+'/photos?earth_date='+date+'&api_key='+NASA_TOKEN
+        var nasaData = new NasaData(url);
+        nasaData.getData();
+        setTimeout(function()
+        {
+            // console.log(nasaData);
+            // console.log(nasaData.url);
+            // console.log(nasaData.album);
+            // console.log(nasaData.album.photos);
+           
+            var pictureView = new PictureView (nasaData);
+            pictureView.populate();
+    
+        
+        }, 900);
+     
+     
+    })
+
+    // roverSelectView.onChange = function(Country) {
+    //     roverDetailsView.render();
+    // }
 
 }
 

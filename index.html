@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="../styles.css" media="screen">
   <link rel"icon" href="../images/nasalogo.png/">
-  <title>Curiosity Rover Holiday Snaps</title>
+  <title>Mars Rover</title>
   <script src='nasaToken.js'></script>
   <script src='nasa_data.js'></script>
-  <script src='rover_select_view.js'></script>
+  <script src='picture_select_view.js'></script>
   <script src='rover_details_view.js'></script>
   <script src='app.js'></script>
 </head>
@@ -17,9 +17,31 @@
     <label for="Rover-drop-down-list">Select a Rover:</label>
     <select name='rover_list' id='rover-drop-down'>
       <option value="" disabled selected>Select a Rover</option>
+      <option value="curiosity">Curiosity</option>
+      <option value="opportunity">Opportunity</option>
+      <option value="spirit">Spirit</option>
       </select>
       </p>
-      <ul id='rovers'></ul>
+
+      <form>
+        Date:
+        <input type='date' name='date' id='date'>
+      </form>
+
+      <button id='get-data-button' type="button">Connect to Mars</button>
+
+      <br>
+
+      <div class="responsive">
+          <div class="gallery" id="rover-gallery">
+            <div class="desc"></div>
+          </div>
+        </div>
+
+      
+
+
+      <!-- <ul id='pictures'></ul> -->
 
 </body>
 </html>
