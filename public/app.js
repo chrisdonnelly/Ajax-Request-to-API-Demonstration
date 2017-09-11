@@ -23,10 +23,6 @@ var app = function(){
         nasaData.getData();
         setTimeout(function()
         {
-            // console.log(nasaData);
-            // console.log(nasaData.url);
-            // console.log(nasaData.album);
-            // console.log(nasaData.album.photos);
            
             var pictureView = new PictureView (nasaData);
             pictureView.populate();
@@ -36,10 +32,6 @@ var app = function(){
      
      
     })
-
-    // roverSelectView.onChange = function(Country) {
-    //     roverDetailsView.render();
-    // }
 
 }
 
