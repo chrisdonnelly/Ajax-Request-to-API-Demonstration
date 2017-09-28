@@ -1,4 +1,4 @@
-# Ajax-Request-to-API-Demonstration
+# Ajax_Request_to_an_API_Demonstration
 
 This app demonstrates the use of ajax requests to retrieve data from a public api.
 
